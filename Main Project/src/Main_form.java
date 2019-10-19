@@ -21,13 +21,11 @@ public class Main_form {
             element[i] = new ListElement(i, "Lorem ipsum", new Dimension(size_active.width-17, 74));
             elementContent[i] = new ListElementContent(size_active, "Title", "lorem ipsum dolem");
         }
-
         {
             for (int i = 0; i < n_len; i++) {
                 active.add(element[i].panel);
             }
-            scrollPane.revalidate();
-
+            scrollPane.setViewportView(active);
 
             core_panel.add(menu);
             core_panel.add(sidebar);
@@ -58,7 +56,7 @@ public class Main_form {
             core_panel.setSize(size);
             menu.setSize(size.width, size_board.height);
             sidebar.setSize(size_board.width, size.height);
-            active.setSize(size_active.width, 101*74);
+            active.setSize(size_active);
             scrollPane.setSize(size_active);
         }//setSize
         {
@@ -102,7 +100,7 @@ class ListElement {
         panel.setLocation(getLocation());
         label.setLocation(size.width/10, size.height/10);
 
-        panel.setBackground(Color.yellow);
+        panel.setBackground(new Color(0, index*10, 0));
 
         panel.add(label);
     }

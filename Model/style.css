@@ -24,10 +24,10 @@ body {
 }
 .side_bar {
 	position: absolute;
-	left: 60px;
+	
 	top: 73.5px;
 	height: 646.5px;
-	width: 200px;/*20%*/
+	width: 260px;/*20%*/
 	background-image: url('https://i.pinimg.com/474x/95/c2/42/95c24221188e49de0439447ba1aa0cc9.jpg');
 	}
 .search {
@@ -68,16 +68,16 @@ body {
 .film {
 	display: inline-block;
 	float: left;
-	margin-left: 7.8px;
-	margin-top: 7.8px;
-	margin-right: 7.8px;
-	margin-bottom: 7.8px;
-	height: 291.2px;
-	width: 202.8px;
+	margin-left: 8px;
+	margin-top: 8px;
+	margin-right: 8px;
+	margin-bottom: 8px;
+	height:207.2px;
+	width: 144.3px;
 	background: white;
 }
 /*5.6x3.9 + 0.15x2 with 40 (224x156 + 6x2)
- 5.6x3.9 + 0.15x2 with 50  (+ 7.8x2)*/
+ 5.6x3.9 + 0.15x2 with 50  ( 291.2+202.8 7.8x2)*/
  .choice{
 	display: inline-block;
 	float: left;

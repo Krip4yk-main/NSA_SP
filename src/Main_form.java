@@ -13,6 +13,8 @@ public class Main_form {
         sidebar = new JPanel();
         active = new JPanel();
 
+        core_panel.setLayout(null);
+
         size = new Dimension(1280, 720);
         size_board = new Dimension(size.width/10, size.height/10);
         size_active = new Dimension(size.width-size_board.width, size.height-size_board.height);

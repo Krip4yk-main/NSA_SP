@@ -14,7 +14,6 @@ public class Main {
         form.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         form.setResizable(false);
         form.setSize(1294, 757);
-        form.add(ttt.core_panel);
         form.setVisible(true);
     }
 }

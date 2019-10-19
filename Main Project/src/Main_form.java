@@ -52,10 +52,33 @@ public class Main_form {
 }
 class ListElement {
     private JPanel panel;
-    public ListElement() {
+    public int index; // [1..n]
+    public Dimension size;
+    public ListElement(int index) {
+        size.setSize(1, 1);
+
         panel = new JPanel();
         panel.setLayout(null);
         //panel.setSize();
         //panel.setLocation();
+    }
+    private Dimension getLocation() {
+        Dimension value = new Dimension();
+        int w = -1;
+        int h = index * (1) ;
+        return value;
+    }
+}
+class BoxElement {
+    private JPanel panel;
+    public int index;
+    public BoxElement(int index) {
+        panel = new JPanel();
+        panel.setLayout(null);
+        //panel.setSize();
+        //panel.setLocation();
+    }
+    private Dimension getLocation() {
+        return new Dimension();
     }
 }

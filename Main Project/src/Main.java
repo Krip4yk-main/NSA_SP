@@ -9,7 +9,7 @@ public class Main {
     }
 
     public static void ini() {
-        Main_form ttt = new Main_form(1280, 720);
+        Main_form ttt = new Main_form();
         form = new JFrame("untilted");
         form.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         form.setResizable(false);

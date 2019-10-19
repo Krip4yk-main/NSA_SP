@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class Main {
     public static JFrame form;
@@ -8,12 +9,14 @@ public class Main {
     }
 
     public static void ini() {
-        Main_form ttt = new Main_form();
+        Main_form ttt = new Main_form(1280, 720);
         form = new JFrame("untilted");
         form.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         form.setResizable(false);
-        form.setSize(ttt.size);
+        form.setSize(1294, 757);
         form.add(ttt.core_panel);
         form.setVisible(true);
+        System.out.println(form.getSize());
+        System.out.println(ttt.core_panel.getSize());
     }
 }

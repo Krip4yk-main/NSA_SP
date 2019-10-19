@@ -7,7 +7,7 @@ public class Main_form {
 
     public Dimension size, size_board, size_active;
 
-    public Main_form() {
+    public Main_form(int w, int h) {
         core_panel = new JPanel();
         menu = new JPanel();
         sidebar = new JPanel();
@@ -15,7 +15,7 @@ public class Main_form {
 
         core_panel.setLayout(null);
 
-        size = new Dimension(1280, 720);
+        size = new Dimension(w, h);
         size_board = new Dimension(size.width/10, size.height/10);
         size_active = new Dimension(size.width-size_board.width, size.height-size_board.height);
 

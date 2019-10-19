@@ -16,7 +16,5 @@ public class Main {
         form.setSize(1294, 757);
         form.add(ttt.core_panel);
         form.setVisible(true);
-        System.out.println(form.getSize());
-        System.out.println(ttt.core_panel.getSize());
     }
 }

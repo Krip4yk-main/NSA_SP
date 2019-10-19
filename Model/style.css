@@ -1,0 +1,108 @@
+body {
+	background: #1201FE;
+}
+.main {
+	height: 757px;
+	width: 1294px;
+	background: #242424;
+}
+
+.active {
+	position: absolute;
+	top: 38px;
+	left: 8px;
+	height: 720px;
+	width: 1280px;
+	background: #F2F1F1;
+	
+}
+/*далі усі відсоткові відношення щодо активного вікна*/
+.menu {
+	position: absolute;
+	height: 74px;/*5%*/
+	width: 1280px;
+	background: #49494A;
+}
+.side_bar {
+	position: absolute;
+	overflow: hidden;
+	top: 74px;
+	height: 646px;
+	width: 260px;/*20%*/
+	background-image: url('https://i.pinimg.com/474x/95/c2/42/95c24221188e49de0439447ba1aa0cc9.jpg');
+	}
+
+.buttton {
+	border: 1px solid black;
+	height: 74px;
+	width: 258px;
+	background: gray;
+}
+.setting {
+	position: absolute;
+	top: 572px;
+	border: 1px solid black;
+	height: 74px;
+	width: 258px;
+	background: gray;
+}
+
+.buton {
+	position: relative;
+	left: 93px;
+	top: -60px;
+	padding-top: -2346px;
+	font-size:21px;
+	
+}
+.icon {
+	margin: 10px;
+	height: 44px;
+	width: 44px;
+	}
+.listt {
+	position: absolute;
+	top: 74px;
+	left: 260px;/*253px*/
+	height: 646.5px;
+	width: 1020px;/*55%*/
+	background: red;
+}
+.scrol {
+	position: absolute;
+	left: 1003px;
+	height: 632px;
+	width: 17px;/*11.75*/
+	background: #E8E7F3;
+}
+.enough {
+	overflow: hidden;
+	/*padding-left: 8px;
+	padding-top: 8px;*/
+	padding-bottom: 8px;
+	padding-right: 8px;
+	height: 638px;
+	width: 1012px;
+	background: #737373;
+}
+.cat {
+	border: 1px solid black;
+	position: relative;
+	/*margin-left: -8px;
+	margin-top: -8px;*/
+	height: 74px;
+	width: 1018px;/*55%*/
+}
+.film {
+	display: inline-block;
+	float: left;
+	margin-left: 8px;
+	margin-top: 8px;
+	margin-right: 8px;
+	margin-bottom: 8px;
+	height:208px;
+	width: 145px;
+	background: white;
+}
+/*5.6x3.9 + 0.15x2 with 40 (224x156 + 6x2)
+ 5.6x3.9 + 0.15x2 with 50  ( 291.2+202.8 7.8x2)*/

@@ -11,6 +11,8 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Main {
     public static int w = 1280, h = 720;
@@ -115,7 +117,7 @@ public class Main {
                 categoriesElements[i].panel.addMouseListener(new MouseListener() {
                     @Override
                     public void mouseClicked(MouseEvent e) {
-                        click_categories(e, finalI);
+                        click_categories(e, finalI, n_c);
                     }
 
                     @Override
@@ -366,8 +368,31 @@ public class Main {
             }
         }
     }
-    private static void click_categories(MouseEvent me, int index) {
+    private static void click_categories(MouseEvent me, int index, int len) {
         categoriesElements[index].showCategories();
+        isVis(index, len);
+    }
+    private static void isVis(int index, int len) {
+        if (categoriesElements[index].mainPanel.isVisible()) {
+            System.out.println("Yes");
+            for (int i = 0; i < len; i++) {
+                categoriesElements[i].panel.setVisible(false);
+            }
+            long delay = 1000;
+            TimerTask task = new TimerTask() {
+                @Override
+                public void run() {
+                    isVis(index, len);
+                }
+            };
+            Timer timer = new Timer("Timer");
+            timer.schedule(task, delay);
+        } else {
+            System.out.println("No");
+            for (int i = 0; i < len; i++) {
+                categoriesElements[i].panel.setVisible(true);
+            }
+        }
     }
 }
 class SideBarElements {
@@ -427,7 +452,6 @@ class CategoriesElements {
     public JPanel panel;
     public JPanel mainPanel;
     public JLabel title;
-    public JLabel text;
     public int index;
     private boolean fatr = false;
     private CategoriesContains categoriesContains[];
@@ -451,6 +475,7 @@ class CategoriesElements {
             }
         });
 
+        mainPanel.setLayout(null);
         mainPanel.setSize(1020, 720);
         mainPanel.setLocation(0, 0);
         mainPanel.setBackground(Color.orange);
@@ -480,8 +505,6 @@ class CategoriesElements {
         mainPanel.setVisible(fatr);
     }
     public void addCategPanel(String title) {
-        System.out.println(title);
-        System.out.println(ind);
         categoriesContains[ind] = new CategoriesContains(ind, title);
         mainPanel.add(categoriesContains[ind].panel);
         ind++;
@@ -498,7 +521,7 @@ class CategoriesContains {
         this.index = index;
 
         panel.setSize(156, 224);
-        panel.setLocation(12+(index*12)+(index*156), 12 + ((index/6)*12) + ((index/6)*224));
+        panel.setLocation(12+(index%6*12)+(index%6*156), 12 + ((index/6)*12) + ((index/6)*224));
 
         panel.setBackground(Color.darkGray);
     }

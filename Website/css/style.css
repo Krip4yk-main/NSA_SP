@@ -1,0 +1,246 @@
+/*GENERAL STYLES*/
+body {
+	font-family: Arial, San-Serif;
+	font-size: 100%;
+	background: linear-gradient(to bottom right, yellow, #002E45, #01293D, #011E2C, #01151E)/*#E3FFD3*/;
+}
+ul {
+	margin: 0;/*зовнішній відступ*/
+	padding: 0;
+}
+ul li{
+	list-style-type: none;/*щоб забрати маркований список*/
+}
+a {
+	text-decoration: none;/*позбутися підкресленого тексту*/
+}
+p {
+	font-size: 13px;
+	line-height: 1.3em;
+}
+.container {
+	margin: 0 auto;/* зн відступ*/
+	width: 80%;
+}
+
+/*HEADER*/
+.header {
+	padding:50px 0;/*внутрішній відступ*/
+	background-image: url(0.jpg);
+	background-size: 100%;
+	width: 100%;
+	position: static;
+}
+	/*animation: headerr 5s;
+}
+@keyframes headerr {
+	0% {height: 200%;}
+	33% {height: 160%;}
+	63% {height: 130%;}
+	100% {height: 100%;}
+}*/
+.header h1 {
+	color: white;
+	text-align: center;
+	font-size: 60px;
+}
+.header h2 {
+	color: white;
+	text-align: center;
+	font-size: 35px;
+}
+
+/*NAV*/
+.page-navigation {
+	width: 100%;
+	background-color: #222;
+	border-color: #101010; 
+	min-height: 64px;/*min*/
+}
+.page-navigation li {
+	float: left;/*обтікання*/
+	width: 100px;
+}
+.page-navigation a {
+	display: block;/*щоб розміщувати елементи на всю ширину тега li*/
+	color: #9d9d9d;
+	line-height: 4em; /*висота стрічки(кнопки)*/
+	font-weight: bold;
+	text-align: center;
+	overflow: hidden;
+}
+.page-navigation li a:hover/*спрацьовує при наведенні курсору мишки*/ {
+	color: #E3FFD3;
+	background-color: black;
+}
+
+/*LOGIN*/
+.login {
+	padding:15px 0;
+	float: right;/*обтікання з правого краю*/
+}
+.login input[type="text"],
+.login input[type="password"]{
+	padding: 5px;
+	margin-right: 5px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	outline: none;
+}
+.login input[type="submit"] {
+	padding: 5px 15px;
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+}
+.login input[type="submit"]:hover,
+button:hover {
+	background-color:darkgrey;
+	color: white;
+}
+/*NAV*/
+/*MAIN PART*/
+.collections {
+	overflow: auto;
+	overflow: hidden;
+}
+.collection-title {
+	color: white;
+	padding-bottom: 5px;
+	border-bottom: 1px solid darkgrey;
+	font-size: 36px;
+	text-align: center;
+}
+.collection-title small {
+	color: #222;
+	font-size: 70%;
+}
+.colllection-item-outer {
+	display: inline-block;
+	float: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 24.9%;
+	box-sizing: border-box;
+}
+.colllection-item-outer1 {
+	display: inline-block;
+	float: left;
+	overflow: relative;
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 24.9%;
+	box-sizing: border-box;
+}
+/*.collections > div:first-child {
+	padding-left: 0;
+	padding-right: 5px;
+}
+.collections > div:last-child {
+	padding-right: 0;
+	padding-left: 5px;
+}*/
+.collection-item {
+	border: 1px solid #959595;
+	display: inline-block;
+	float: left;
+	width: 24.8%;
+	background-color:linear-gradient(to bottom right, yellow, #002E45, #01293D, #011E2C, #01151E);
+}
+.collection-item1 {
+	border: 0.05px solid #959595;
+	position: relative;
+	float: left;
+	width: 100%;
+	background-color:linear-gradient(to bottom right, yellow, #002E45, #01293D, #011E2C, #01151E);
+}
+.collection-item img,
+.collection-item video {
+	width: 100%;
+	height:260px;
+	
+}
+.collection-item1 img,
+.collection-item1 video {
+	margin: 14px;
+	width: 44px;
+	height:44px;
+	
+}
+.collection-text {
+	padding: 0px 20px 20px 20px;
+	overflow: hidden;
+}
+.collection-text1 {
+	text-align: center;
+	height: 40px;
+	overflow: hidden;
+}
+.collection-text h3 {
+	color: white;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	
+}
+
+.collection-text a {
+	color: white;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.change {
+	color: #222;
+	overflow: relative;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: center;
+	font-weight: bold;
+	font-size: 17pt;
+}
+.change1 {
+	position: absolute;
+	top: 25px;
+	left: 94px;
+	color: white;
+	/*white-space: nowrap;
+	text-overflow: ellipsis;*/
+	font-weight: bold;
+	font-size: 17pt;
+}
+.collection-text p {
+	height: 80px;
+	overflow: hidden;
+	color: white;
+}
+
+.collection-text button {
+	padding: 10px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	outline: none;
+}
+
+/*FOOTER*/
+.footer {
+	/*background:linear-gradient(#011E2C, #01151E)/*#E3FFD3*/;*/
+	color: white;
+	padding: 1px 0;
+	margin-top: 30px;
+}
+.to-top {
+	background: linear-gradient(to bottom right, #011E2C)/*#E3FFD3*/;
+	position: fixed;
+	z-index: 1;
+	right: 10px;
+	bottom: 115px;
+	cursor: pointer;
+	padding: 5px 15px;
+	color: #F6FCFF/*#E3FFD3*/;
+}
+.to-top li a:hover {
+	color:white;
+	background-color: #011E2C;
+	border: 1px solid transparent;
+	border-radius: 5px;
+}

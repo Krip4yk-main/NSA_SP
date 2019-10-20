@@ -219,14 +219,14 @@ public class Main {
         sidebar.setLayout(null);
         sidebar.setSize(size_sidebar);
         sidebar.setLocation(0, 0);
-        sidebar.setBackground(Color.blue);
+        sidebar.setBackground(Color.gray);
     }
     private static void setActive() {
         active = new JPanel();
         active.setLayout(null);
         active.setSize(size_active);
         active.setLocation(260, 0);
-        active.setBackground(Color.yellow);
+        active.setBackground(new Color(0xA0A0A0));
     }
     private static void setHome() {
         home = new JPanel();
@@ -430,7 +430,7 @@ class SideBarElements {
 
         panel.setSize(size);
         panel.setLocation(location);
-        panel.setBackground(Color.gray);
+        panel.setBackground(Color.GRAY);
         panel.setBorder(new LineBorder(Color.black));
         panel.setLayout(null);
 
@@ -478,7 +478,7 @@ class CategoriesElements {
         mainPanel.setLayout(null);
         mainPanel.setSize(1020, 720);
         mainPanel.setLocation(0, 0);
-        mainPanel.setBackground(Color.orange);
+        mainPanel.setBackground(new Color(0xa3a3a3));
         mainPanel.setVisible(false);
 
         this.title.setLocation(14, 14);
@@ -490,7 +490,7 @@ class CategoriesElements {
         panel.setLocation(0, index*72);
         panel.setBorder(new LineBorder(Color.black));
 
-        panel.setBackground(Color.red);
+        panel.setBackground(Color.LIGHT_GRAY);
 
         panel.add(this.title);
 
@@ -523,6 +523,6 @@ class CategoriesContains {
         panel.setSize(156, 224);
         panel.setLocation(12+(index%6*12)+(index%6*156), 12 + ((index/6)*12) + ((index/6)*224));
 
-        panel.setBackground(Color.darkGray);
+        panel.setBackground(Color.lightGray);
     }
 }

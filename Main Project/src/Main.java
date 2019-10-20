@@ -2,6 +2,8 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
@@ -18,6 +20,7 @@ public class Main {
     public static JPanel sidebar, active;
     public static JPanel home, categories, library, activity, projects, settings;
     public static int act = 0;
+    private static CategoriesElements categoriesElements[];
 
     public static Dimension size, size_active, size_sidebar;
 
@@ -95,7 +98,7 @@ public class Main {
             setCategories();
 
             int n_c = 10;
-            CategoriesElements categoriesElements[] = new CategoriesElements[n_c];
+            categoriesElements = new CategoriesElements[n_c];
             categoriesElements[0] = new CategoriesElements(0, "History");
             categoriesElements[1] = new CategoriesElements(1, "Tech");
             categoriesElements[2] = new CategoriesElements(2, "Technology");
@@ -108,9 +111,60 @@ public class Main {
             categoriesElements[9] = new CategoriesElements(9, "Other");
 
             for (int i = 0; i < n_c; i++) {
-                categories.add(categoriesElements[i].panel);
+                int finalI = i;
+                categoriesElements[i].panel.addMouseListener(new MouseListener() {
+                    @Override
+                    public void mouseClicked(MouseEvent e) {
+                        click_categories(e, finalI);
+                    }
+
+                    @Override
+                    public void mousePressed(MouseEvent e) {
+
+                    }
+
+                    @Override
+                    public void mouseReleased(MouseEvent e) {
+
+                    }
+
+                    @Override
+                    public void mouseEntered(MouseEvent e) {
+
+                    }
+
+                    @Override
+                    public void mouseExited(MouseEvent e) {
+
+                    }
+                });
             }
 
+            categoriesElements[0].addCategPanel("Title");
+            categoriesElements[0].addCategPanel("Title");
+            categoriesElements[0].addCategPanel("Title");
+            categoriesElements[0].addCategPanel("Title");
+
+            categoriesElements[1].addCategPanel("Title");
+            categoriesElements[1].addCategPanel("Title");
+            categoriesElements[1].addCategPanel("Title");
+
+            categoriesElements[2].addCategPanel("Title");
+            categoriesElements[2].addCategPanel("Title");
+            categoriesElements[2].addCategPanel("Title");
+            categoriesElements[2].addCategPanel("Title");
+            categoriesElements[2].addCategPanel("Title");
+            categoriesElements[2].addCategPanel("Title");
+            categoriesElements[2].addCategPanel("Title");
+            categoriesElements[2].addCategPanel("Title");
+
+
+            for (int i = 0; i < n_c; i++) {
+                categories.add(categoriesElements[i].panel);
+            }
+            for (int i = 0; i < n_c; i++) {
+                categories.add(categoriesElements[i].mainPanel);
+            }
         } // catefories
 
         {
@@ -312,6 +366,9 @@ public class Main {
             }
         }
     }
+    private static void click_categories(MouseEvent me, int index) {
+        categoriesElements[index].showCategories();
+    }
 }
 class SideBarElements {
     public JPanel panel;
@@ -368,9 +425,14 @@ class SideBarElements {
 }
 class CategoriesElements {
     public JPanel panel;
+    public JPanel mainPanel;
     public JLabel title;
     public JLabel text;
     public int index;
+    private boolean fatr = false;
+    private CategoriesContains categoriesContains[];
+    private int ind = 0;
+    private JButton button;
 
     public CategoriesElements(int index, String title) {
         panel = new JPanel();
@@ -395,6 +457,23 @@ class CategoriesElements {
         this.title = new JLabel(title);
         this.text = new JLabel(text);
         this.index = index;
+        mainPanel = new JPanel();
+        categoriesContains = new CategoriesContains[16];
+        button = new JButton("Back");
+
+        button.setSize(12, 12);
+        button.setLocation(0, 0);
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                showCategories();
+            }
+        });
+
+        mainPanel.setSize(1020, 720);
+        mainPanel.setLocation(0, 0);
+        mainPanel.setBackground(Color.orange);
+        mainPanel.setVisible(false);
 
         this.title.setLocation(14, 14);
         this.title.setSize(996, 44);
@@ -403,15 +482,41 @@ class CategoriesElements {
         panel.setLayout(null);
         panel.setSize(1020, 72);
         panel.setLocation(0, index*72);
+        panel.setBorder(new LineBorder(Color.black));
 
         panel.setBackground(Color.red);
 
         panel.add(this.title);
+
+        mainPanel.add(button);
+    }
+    public void showCategories() {
+        if (fatr) {
+            fatr = false;
+        } else {
+            fatr = true;
+        }
+        mainPanel.setVisible(fatr);
+    }
+    public void addCategPanel(String title) {
+        categoriesContains[ind] = new CategoriesContains(ind, title);
+        mainPanel.add(categoriesContains[ind].panel);
+        ind++;
     }
 }
 class CategoriesContains {
+    public JPanel panel;
+    public JTextArea textArea;
+    public int index;
 
-    public CategoriesContains() {
+    public CategoriesContains(int index, String title) {
+        panel = new JPanel();
+        textArea = new JTextArea();
+        this.index = index;
 
+        panel.setSize(156, 224);
+        panel.setLocation(12+(index*12)+(index*156), 12 + ((index/6)*12) + ((index/6)*224));
+
+        panel.setBackground(Color.darkGray);
     }
 }

@@ -58,16 +58,16 @@ public class Main {
 
             for (int i = 0; i < n_sb; i++) {
                 int finalI = i;
-                int finalI1 = i;
                 sideBarElements[i].panel.addMouseListener(new MouseListener() {
                     @Override
                     public void mouseClicked(MouseEvent e) {
+                        sideBarElements[act].panel.setBackground(Color.gray);
                         click_sidebar(e, finalI);
+                        sideBarElements[finalI].panel.setBackground(Color.lightGray);
                     }
 
                     @Override
                     public void mousePressed(MouseEvent e) {
-
                     }
 
                     @Override
@@ -77,12 +77,10 @@ public class Main {
 
                     @Override
                     public void mouseEntered(MouseEvent e) {
-                        sideBarElements[finalI1].panel.setBackground(new Color(253, 119, 42));
                     }
 
                     @Override
                     public void mouseExited(MouseEvent e) {
-                        sideBarElements[finalI1].panel.setBackground(Color.GRAY);
                     }
                 });
             }

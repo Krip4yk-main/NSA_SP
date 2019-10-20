@@ -59,6 +59,11 @@ public class Main {
                 sideBarElements[i].panel.addMouseListener(new MouseListener() {
                     @Override
                     public void mouseClicked(MouseEvent e) {
+                        for (int i = 0; i < n_sb; i++) {
+                            sideBarElements[i].panel.setBackground(Color.gray);
+                        }
+                        sideBarElements[finalI].panel.setBackground(Color.red);
+
                         click_sidebar(e, finalI);
                     }
 
@@ -412,6 +417,7 @@ class SideBarElements {
         panel.add(image);
         panel.add(text);
     }
+
     public SideBarElements(int index) {
         panel = new JPanel();
         this.index = index;
@@ -423,6 +429,7 @@ class SideBarElements {
         panel.setVisible(false);
     }
 }
+
 class CategoriesElements {
     public JPanel panel;
     public JPanel mainPanel;

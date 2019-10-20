@@ -10,7 +10,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Main Project/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="100" column="60" selection-start-line="100" selection-start-column="60" selection-end-line="100" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2124#2894#1" />
+                <element signature="e#4181#4218#0" />
+                <element signature="e#4239#4277#0" />
+                <element signature="e#4299#4337#0" />
+                <element signature="e#4359#4397#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -42,7 +60,28 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="NSA_SP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NSA_SP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NSA_SP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NSA_SP" type="462c0819:PsiDirectoryNode" />
+              <item name="Main Project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NSA_SP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NSA_SP" type="462c0819:PsiDirectoryNode" />
+              <item name="Main Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
@@ -71,11 +110,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -93,7 +127,7 @@
   <component name="ToolWindowManager">
     <frame x="56" y="-7" width="1487" height="878" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13034338" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13384724" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -111,6 +145,7 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -122,29 +157,22 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/Main_form.java" />
+    <entry file="file://$PROJECT_DIR$/Model/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main_form.java">
+    <entry file="file://$PROJECT_DIR$/Main Project/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="49" column="14" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+        <state relative-caret-position="17">
+          <caret line="100" column="60" selection-start-line="100" selection-start-column="60" selection-end-line="100" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#238#392#1" />
-            <element signature="e#401#559#1" />
-            <element signature="e#568#799#1" />
-            <element signature="e#808#1015#1" />
-            <element signature="e#1024#1237#1" />
-            <element signature="e#1246#1445#1" />
-            <element signature="e#1454#1572#1" />
+            <element signature="e#2124#2894#1" />
+            <element signature="e#4181#4218#0" />
+            <element signature="e#4239#4277#0" />
+            <element signature="e#4299#4337#0" />
+            <element signature="e#4359#4397#0" />
           </folding>
         </state>
       </provider>

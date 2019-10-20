@@ -85,7 +85,7 @@ public class Main {
             for (int i = 0; i < n_sb; i++) {
                 sidebar.add(sideBarElements[i].panel);
             }
-        }
+        } // sidebar elements
 
         {
             setHome();
@@ -368,14 +368,12 @@ class SideBarElements {
 }
 class CategoriesElements {
     public JPanel panel;
-    public JPanel contains;
     public JLabel title;
     public JLabel text;
     public int index;
 
     public CategoriesElements(int index, String title) {
         panel = new JPanel();
-        contains = new JPanel();
         this.title = new JLabel(title);
         this.index = index;
 
@@ -394,7 +392,6 @@ class CategoriesElements {
     }
     public CategoriesElements(int index, String title, String text, String img) {
         panel = new JPanel();
-        contains = new JPanel();
         this.title = new JLabel(title);
         this.text = new JLabel(text);
         this.index = index;
@@ -410,5 +407,11 @@ class CategoriesElements {
         panel.setBackground(Color.red);
 
         panel.add(this.title);
+    }
+}
+class CategoriesContains {
+
+    public CategoriesContains() {
+
     }
 }

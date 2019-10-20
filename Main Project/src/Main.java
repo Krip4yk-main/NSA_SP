@@ -438,25 +438,6 @@ class CategoriesElements {
         panel = new JPanel();
         this.title = new JLabel(title);
         this.index = index;
-
-        this.title.setLocation(14, 14);
-        this.title.setSize(996, 44);
-        this.title.setFont(new Font(Font.SERIF, Font.PLAIN, 21));
-
-        panel.setLayout(null);
-        panel.setSize(1020, 72);
-        panel.setLocation(0, index*72);
-        panel.setBorder(new LineBorder(Color.black));
-
-        panel.setBackground(Color.red);
-
-        panel.add(this.title);
-    }
-    public CategoriesElements(int index, String title, String text, String img) {
-        panel = new JPanel();
-        this.title = new JLabel(title);
-        this.text = new JLabel(text);
-        this.index = index;
         mainPanel = new JPanel();
         categoriesContains = new CategoriesContains[16];
         button = new JButton("Back");
@@ -499,6 +480,8 @@ class CategoriesElements {
         mainPanel.setVisible(fatr);
     }
     public void addCategPanel(String title) {
+        System.out.println(title);
+        System.out.println(ind);
         categoriesContains[ind] = new CategoriesContains(ind, title);
         mainPanel.add(categoriesContains[ind].panel);
         ind++;

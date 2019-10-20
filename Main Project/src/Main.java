@@ -77,10 +77,12 @@ public class Main {
 
                     @Override
                     public void mouseEntered(MouseEvent e) {
+                        if (finalI != act) sideBarElements[finalI].panel.setBackground(new Color(253, 119, 42));
                     }
 
                     @Override
                     public void mouseExited(MouseEvent e) {
+                        if (finalI != act) sideBarElements[finalI].panel.setBackground(Color.gray);
                     }
                 });
             }

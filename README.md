@@ -11,7 +11,8 @@ Constructive solution
 
 Back to the Moon is an application that will continue to have a web version for people who prefer online resources. The left panel has 6 tabs: homepage (display of recent news and projects of other people), categories (history of the Moon, famous figures, areas of the Moon's exploration, techniques and technologies used to implement, patterns, models and guides to assist in the implementation of your own projects), library (interactive part: the tab displays all the programs installed on your computer that can potentially help with the implementation of projects), activity (displaying your actions and live chat), projects (list of published projects / layouts / patterns) and settings (edit account, privacy online, language, change password, change keyboard shortcuts and add / remove programs in the library, notification settings)
 
-#Back to the Moon (ukr. version)
+Back to the Moon (ukr. version)
+
 Актуальність проблеми
 
 Опісля закінчення холодної війни людство припиноло активно досліджувати наш супутник. Завдяки масмедіа ми щодня маємо можливість спостерігати за новими проєктами, пов'язані з дослідженням Марсу, але ми забули про Місяць. Наша команда вирішила допомогти вирішити цю проблему, та повернутись до досі актуальних тем, про які вирішили забути 50 років тому.

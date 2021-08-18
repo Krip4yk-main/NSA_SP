@@ -100,6 +100,7 @@ public class Main {
         {
             setCategories();
 
+
             int n_c = 10;
             categoriesElements = new CategoriesElements[n_c];
             categoriesElements[0] = new CategoriesElements(0, "History");
